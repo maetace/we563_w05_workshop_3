@@ -3,18 +3,18 @@ import 'package:get/get.dart';
 
 class HomeController extends GetxController {
   void onLogoutPressed() {
-    Get.defaultDialog(
-        title: 'Confirm Log Out',
-        middleText: 'Are you sure you want to log out?',
-        textConfirm: 'Log Out',
-        textCancel: 'Cancel',
-        onCancel: () => Get.back(),
-        onConfirm: () {
-          Get.snackbar('Log Out Successful',
-              'You\'ve been logged out. See you again soon, Demo User! 👀',
-              colorText: Colors.white);
-          Get.offAllNamed('/');
-        });
+    // Get.defaultDialog(
+    //     title: 'Confirm Log Out',
+    //     middleText: 'Are you sure you want to log out?',
+    //     textConfirm: 'Log Out',
+    //     textCancel: 'Cancel',
+    //     onCancel: () => Get.back(),
+    //     onConfirm: () {
+    //       Get.snackbar('Log Out Successful',
+    //           'You\'ve been logged out. See you again soon, Demo User! 👀',
+    //           colorText: Colors.white);
+    //       Get.offAllNamed('/');
+    //     });
     Get.bottomSheet(
       Container(
         padding: EdgeInsets.all(32),

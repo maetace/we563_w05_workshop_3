@@ -17,7 +17,10 @@ class HomePage extends GetView<HomeController> {
           children: [
             Text(
               'This is Home page',
-              style: Theme.of(context).textTheme.titleLarge,
+              style: Theme.of(context)
+                  .textTheme
+                  .titleLarge
+                  ?.copyWith(color: Colors.white),
             ),
             SizedBox(
               height: 24,
