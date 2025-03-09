@@ -9,22 +9,53 @@ class LogInPage extends GetView<LogInController> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.blue,
-      body: Center(
+      body: Padding(
+        padding: const EdgeInsets.all(48.0),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
-          spacing: 8.0,
+          crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             Text(
               'This is log in page',
               style: Theme.of(context).textTheme.titleLarge,
             ),
-            ElevatedButton(
-              onPressed: controller.onBackPressed,
-              child: Text('Back'),
+            SizedBox(
+              height: 24,
             ),
-            ElevatedButton(
-              onPressed: controller.onLogInPressed,
-              child: Text('Log In'),
+            Row(
+              children: [
+                Expanded(
+                  child: ElevatedButton(
+                    onPressed: controller.onBackPressed,
+                    style: ElevatedButton.styleFrom(
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(4)),
+                      backgroundColor: Colors.white,
+                      foregroundColor: Colors.blue,
+                      elevation: 0,
+                      side: BorderSide(color: Colors.blue.shade200),
+                    ),
+                    child: Text('Back'),
+                  ),
+                ),
+                SizedBox(
+                  width: 12,
+                ),
+                Expanded(
+                  child: ElevatedButton(
+                    onPressed: controller.onLogInPressed,
+                    style: ElevatedButton.styleFrom(
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(4)),
+                      backgroundColor: Colors.white,
+                      foregroundColor: Colors.blue,
+                      elevation: 0,
+                      side: BorderSide(color: Colors.blue.shade200),
+                    ),
+                    child: Text('Log In'),
+                  ),
+                ),
+              ],
             ),
           ],
         ),

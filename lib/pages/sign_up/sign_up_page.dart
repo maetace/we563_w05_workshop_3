@@ -9,18 +9,53 @@ class SignUpPage extends GetView<SignUpController> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.blue,
-      body: Center(
+      body: Padding(
+        padding: const EdgeInsets.all(48.0),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
-          spacing: 8.0,
+          crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             Text(
               'This is sign up page',
               style: Theme.of(context).textTheme.titleLarge,
             ),
-            ElevatedButton(
-              onPressed: controller.onBackPressed,
-              child: Text('Back'),
+            SizedBox(
+              height: 24,
+            ),
+            Row(
+              children: [
+                Expanded(
+                  child: ElevatedButton(
+                    onPressed: controller.onBackPressed,
+                    style: ElevatedButton.styleFrom(
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(4)),
+                      backgroundColor: Colors.white,
+                      foregroundColor: Colors.blue,
+                      elevation: 0,
+                      side: BorderSide(color: Colors.blue.shade200),
+                    ),
+                    child: Text('Back'),
+                  ),
+                ),
+                SizedBox(
+                  width: 12,
+                ),
+                Expanded(
+                  child: ElevatedButton(
+                    onPressed: controller.onSignUpPressed,
+                    style: ElevatedButton.styleFrom(
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(4)),
+                      backgroundColor: Colors.white,
+                      foregroundColor: Colors.blue,
+                      elevation: 0,
+                      side: BorderSide(color: Colors.blue.shade200),
+                    ),
+                    child: Text('Sign Up'),
+                  ),
+                ),
+              ],
             ),
           ],
         ),
